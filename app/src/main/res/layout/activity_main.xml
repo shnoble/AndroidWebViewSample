@@ -26,6 +26,7 @@
             app:layout_constraintLeft_toLeftOf="@+id/webView"
             app:layout_constraintRight_toRightOf="@+id/webView"
             app:layout_constraintTop_toTopOf="@+id/webView"
-            android:progressDrawable="@color/colorWebViewLoadingProgressBar"/>
+            android:progressDrawable="@color/colorWebViewLoadingProgressBar"
+            android:background="@android:color/transparent"/>
 
 </android.support.constraint.ConstraintLayout>

@@ -23,10 +23,11 @@
             android:layout_height="3dp"
             android:id="@+id/loadingProgressBar"
             android:max="100"
+            android:progress="0"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="@+id/webView"
             app:layout_constraintLeft_toLeftOf="@+id/webView"
             app:layout_constraintRight_toRightOf="@+id/webView"
-            app:layout_constraintTop_toTopOf="@+id/webView"
-            android:progressDrawable="@color/colorWebViewLoadingProgressBar"
-            android:background="@android:color/transparent"/>
+            android:progressDrawable="@drawable/webview_loading_progressbar"/>
 
 </android.support.constraint.ConstraintLayout>

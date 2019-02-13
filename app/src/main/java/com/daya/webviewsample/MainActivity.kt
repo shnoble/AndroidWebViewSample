@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.graphics.Bitmap
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
 import android.view.View
 import android.webkit.WebChromeClient
 import android.webkit.WebResourceRequest
@@ -25,8 +26,7 @@ class MainActivity : AppCompatActivity() {
         webView.webViewClient = ToastWebViewClient()
         webView.webChromeClient = ToastWebChromeClient()
         webView.settings.javaScriptEnabled = true
-        //webView.loadUrl("https://m.naver.com")
-        webView.loadUrl("https://toast.com")
+        webView.loadUrl("https://m.naver.com")
     }
 
     inner class ToastWebViewClient : WebViewClient() {

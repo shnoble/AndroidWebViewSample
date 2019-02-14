@@ -31,18 +31,22 @@ class MainActivity : AppCompatActivity() {
 
     inner class ToastWebViewClient : WebViewClient() {
         override fun shouldOverrideUrlLoading(view: WebView?, request: WebResourceRequest?): Boolean {
+
+            Log.d(TAG, "shouldOverrideUrlLoading: ${request?.url}")
             return super.shouldOverrideUrlLoading(view, request)
         }
 
         override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
             super.onPageStarted(view, url, favicon)
 
+            Log.d(TAG, "onPageStarted: $url")
             loadingProgressBar.visibility = View.VISIBLE
         }
 
         override fun onPageFinished(view: WebView?, url: String?) {
             super.onPageFinished(view, url)
 
+            Log.d(TAG, "onPageFinished: $url")
             loadingProgressBar.visibility = View.GONE
         }
     }
@@ -51,7 +55,12 @@ class MainActivity : AppCompatActivity() {
         override fun onProgressChanged(view: WebView?, newProgress: Int) {
             super.onProgressChanged(view, newProgress)
 
+            Log.d(TAG, "onProgressChanged: $newProgress")
             loadingProgressBar.progress = newProgress
         }
+    }
+
+    companion object {
+        const val TAG: String = "MainActivity"
     }
 }
